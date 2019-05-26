@@ -7,13 +7,17 @@ header {
   background-image: url("../resources/bg.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 header .content-wrap {
@@ -83,7 +87,7 @@ header .content-wrap h1 {
   margin-bottom: 45px;
 }
 
-header .content-wrap h1 red {
+header .content-wrap h1 .red {
   color: red;
 }
 
@@ -106,7 +110,7 @@ header .content-wrap .hire-me-btn {
   margin: 0;
   padding: 20px 70px;
   border-radius: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 85px;
 }
 
 header .content-wrap .hire-me-btn:hover {
@@ -125,7 +129,7 @@ header .content-wrap .arrow-down a {
 
 .about-me .content-wrap-about-me {
   width: 60%;
-  padding: 100px;
+  padding: 100px 0;
   text-align: center;
   margin: auto;
   font-family: "Lato", sans-serif;
@@ -142,6 +146,7 @@ header .content-wrap .arrow-down a {
   font-size: 16px;
   font-weight: 400;
   line-height: 35px;
+  color: #181818;
 }
 
 .knowledge {
@@ -196,7 +201,7 @@ header .content-wrap .arrow-down a {
       -ms-flex-align: center;
           align-items: center;
   width: 20%;
-  min-width: 150px;
+  min-width: 250px;
   padding: 50px;
   border-radius: 30px;
   margin: auto;
@@ -207,7 +212,9 @@ header .content-wrap .arrow-down a {
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  height: 230px;
+  height: 330px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .knowledge .container .card:hover {
@@ -265,6 +272,8 @@ header .content-wrap .arrow-down a {
           transform: rotateY(180deg);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  word-wrap: break-word;
+  color: #131516;
 }
 
 .knowledge .container .card .inside-container .back p {
