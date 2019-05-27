@@ -13,11 +13,30 @@ $fonts: (
 
 $colors: (
   main: #3695ff,
-  text: #131516
+  main-darken: #3181dd,
+  secondary: #f1f8ff,
+  complementary: #ffa136,
+  complementary-darken: rgb(255, 125, 0),
+  text: #131516,
+  linkedin: #0077B5,
+  git: #9E45AB
 );
 
 html {
   scroll-behavior: smooth;
+}
+
+.btn {
+  font-family: map-get($map: $fonts, $key: lato);
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  margin: 0;
+  padding: 20px 70px;
+  border-radius: 30px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 header {
@@ -76,6 +95,7 @@ header {
       font-weight: 900;
       color: white;
       margin-bottom: 45px;
+      word-break: break-all;
 
       .red {
         color: red;
@@ -89,23 +109,17 @@ header {
       font-weight: 300;
       line-height: 35px;
       margin-bottom: 75px;
+
+      b {
+        font-weight: 700;
+        color: #fff;
+      }
     }
 
-    .hire-me-btn {
-      font-family: map-get($map: $fonts, $key: lato);
-      font-size: 16px;
-      font-weight: 700;
+    .contact-me {
       color: #3695ff;
       background-color: #fff;
-      border: none;
-      margin: 0;
-      padding: 20px 70px;
-      border-radius: 30px;
       margin-bottom: 85px;
-
-      &:hover {
-        cursor: pointer;
-      }
     }
 
     .arrow-down {
@@ -130,7 +144,7 @@ header {
     h1 {
       font-size: 50px;
       font-weight: 100;
-      color: #3695ff;
+      color: map-get($map: $colors, $key: main);
       margin-bottom: 70px;
     }
 
@@ -138,14 +152,14 @@ header {
       font-size: 16px;
       font-weight: 400;
       line-height: 35px;
-      color: rgb(24, 24, 24);
+      color: map-get($map: $colors, $key: text);
     }
   }
 }
 
 .knowledge {
   width: 100%;
-  background-color: #f1f8ff;
+  background-color: map-get($map: $colors, $key: secondary);
   padding: 100px 0;
   text-align: center;
   font-family: map-get($map: $fonts, $key: lato);
@@ -154,7 +168,7 @@ header {
     margin-bottom: 120px;
     font-size: 50px;
     font-weight: 100;
-    color: #3695ff;
+    color: map-get($map: $colors, $key: main);
     margin-bottom: 70px;
   }
 
@@ -235,7 +249,6 @@ header {
             font-size: 16px;
           }
         }
-
       }
     }
   }
@@ -247,6 +260,7 @@ header {
   .container {
     width: 60%;
     margin: auto;
+    text-align: center;
 
     .title {
       text-align: center;
@@ -258,6 +272,287 @@ header {
         margin-bottom: 70px;
       }
     }
+
+    .github {
+      font-family: map-get($map: $fonts, $key: lato);
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      background-color: map-get($map: $colors, $key: complementary);
+      padding: 20px 70px;
+      border-radius: 30px;
+      transition: background-color 200ms ease;
+      &:hover {
+        background-color: map-get($map: $colors, $key: complementary-darken);
+      }
+      a {
+        all: unset;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .projects {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 50px;
+
+      .project {
+        box-sizing: border-box;
+        position: relative;
+        background-color: map-get($map: $colors, $key: main);
+        margin: 0px auto 10px auto;
+        width: 25%;
+        padding: 20px;
+        border-radius: 30px;
+        min-height: 200px;
+        min-width: 207px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        .overlay {
+          z-index: 1;
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .p-title {
+          margin: auto;
+          transition: opacity 300ms ease;
+          width: 100%;
+          p {
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            font-family: map-get($map: $fonts, $key: montserrat);
+            color: #fff;
+            user-select: none;
+            word-wrap: break-word;
+          }
+        }
+
+        &:hover .p-content,
+        &:hover .overlay {
+          opacity: 1;
+        }
+
+        .p-content,
+        .overlay {
+          transition: opacity 200ms ease;
+        }
+
+        .p-content {
+          opacity: 0;
+          z-index: 2;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          user-select: none;
+
+          p {
+            font-family: map-get($map: $fonts, $key: lato);
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #fff;
+          }
+
+          a {
+            box-sizing: border-box;
+            all: unset;
+            padding: 5px 10px;
+            background-color: map-get($map: $colors, $key: main);
+            border-radius: 5px;
+            color: #fff;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  background-color: map-get($map: $colors, $key: secondary);
+  .container {
+    padding: 100px 0;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      color: map-get($map: $colors, $key: main);
+      font-family: map-get($map: $fonts, $key: lato);
+      font-weight: 700;
+      font-size: 30px;
+    }
+
+    button {
+      text-decoration: none;
+      background-color: #fff;
+      color: map-get($map: $colors, $key: main);
+      border: 1px solid map-get($map: $colors, $key: main);
+    }
+  }
+}
+
+footer {
+  padding: 50px;
+  background-image: url("../resources/footer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  .container {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+      flex-wrap: wrap;
+
+
+      .link {
+        box-sizing: border-box;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 85px;
+        height: 85px;
+        a {
+          all: unset;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+
+
+          
+          i {
+            font-size: 40px;
+
+            &.fab.fa-github {
+              color: map-get($map: $colors, $key: git);
+            }
+
+            &.fa-linkedin {
+              color: map-get($map: $colors, $key: linkedin);
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: -5;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 60%;
+    border-radius: 20px;
+    top: -100%;
+    transition: top 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .modal-title {
+      margin-bottom: 20px;
+      text-align: center;
+      h3 {
+        font-family: map-get($map: $fonts, $key: lato);
+        font-weight: 700;
+        color: map-get($map: $colors, $key: main);
+        font-size: 20px;
+      }
+    }
+
+    .closeBtn {
+      top: 5px;
+      right: 15px;
+      position: absolute;
+      font-size: 30px;
+      color: rgb(95, 95, 95);
+
+      &:hover,
+      &:focus {
+        color: rgb(31, 31, 31);
+        cursor: pointer;
+        text-decoration: #000;
+      }
+    }
+
+    form {
+      width: 100%;
+
+      input,
+      textarea {
+        all: unset;
+        width: 100%;
+        border: 1px solid rgba(34, 34, 34, 0.459);
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      input {
+        margin-bottom: 10px;
+        height: 20px;
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: map-get($map: $colors, $key: main);
+        font-size: 20px;
+        color: #fff;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 
@@ -266,114 +561,37 @@ header {
   box-shadow: 0px 16px 27px -15px rgba(82, 79, 82, 1);
 }
 
-//sandwich button
-
-.sandwich {
-  position: absolute;
-  transform: scale(0.5);
-  right: 20px;
-  top: 0;
-}
-
-#sandwich {
-  width: 60px;
-  height: 45px;
-  position: relative;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-}
-
-#sandwich span {
-  display: block;
-  position: absolute;
-  height: 9px;
-  width: 50%;
-  background: #fff;
+.show-modal {
   opacity: 1;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  .show-modal-content {
+    top: 0;
+  }
 }
 
-#sandwich span:nth-child(even) {
-  left: 50%;
-  border-radius: 0 9px 9px 0;
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
 }
 
-#sandwich span:nth-child(odd) {
-  left: 0px;
-  border-radius: 9px 0 0 9px;
-}
+@media screen and (max-width: 320px) {
+  .knowledge {
+    .container {
+      .card {
+        min-width: 200px;
+      }
+    }
+  }
 
-#sandwich span:nth-child(1),
-#sandwich span:nth-child(2) {
-  top: 0px;
-}
-
-#sandwich span:nth-child(3),
-#sandwich span:nth-child(4) {
-  top: 18px;
-}
-
-#sandwich span:nth-child(5),
-#sandwich span:nth-child(6) {
-  top: 36px;
-}
-
-#sandwich.open span:nth-child(1),
-#sandwich.open span:nth-child(6) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-#sandwich.open span:nth-child(2),
-#sandwich.open span:nth-child(5) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-#sandwich.open span:nth-child(1) {
-  left: 5px;
-  top: 7px;
-}
-
-#sandwich.open span:nth-child(2) {
-  left: calc(50% - 5px);
-  top: 7px;
-}
-
-#sandwich.open span:nth-child(3) {
-  left: -50%;
-  opacity: 0;
-}
-
-#sandwich.open span:nth-child(4) {
-  left: 100%;
-  opacity: 0;
-}
-
-#sandwich.open span:nth-child(5) {
-  left: 5px;
-  top: 29px;
-}
-
-#sandwich.open span:nth-child(6) {
-  left: calc(50% - 5px);
-  top: 29px;
+  .works {
+    .container {
+      .projects {
+        .project {
+          min-width: 180px;
+        }
+      }
+    }
+  }
 }

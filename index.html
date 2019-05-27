@@ -13,32 +13,25 @@
     <title>/levandovskyi.</title>
 </head>
 
-<body>
+<body id="body">
     <header>
         <div class="content-wrap">
             <div class="sandwich">
-                <div id="sandwich">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
             <div class="first-layer">
                 <div class="second-layer">
-                    <div class="photo">
+                    <div class="photo" id="photo">
                     </div>
                 </div>
             </div>
             <div class="content-info">
                 <h1>/levandovskyi<span class="red">.</span>
                 </h1>
-                <p>Hi there! My name is <span>Yegor Levandovskyi</span>, I am a beginner full stack web developer, and this is my portfolio page!
+                <p>Hi there! My name is <b>Yegor Levandovskyi</b>, I am a beginner full stack web developer, and
+                    this is my portfolio page!
                 </p>
             </div>
-            <button class="hire-me-btn">CONTACT</button>
+            <button id="triggerBtn" class="contact-me btn">CONTACT</button>
             <div class="arrow-down">
                 <a href="#about-me"><i class="fas fa-chevron-down"></i></a>
             </div>
@@ -47,20 +40,28 @@
     <section class="about-me" id="about-me">
         <div class="content-wrap-about-me">
             <h1>About Me</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati sed animi nostrum exercitationem
-                quis, quo voluptate magnam! Magnam, praesentium quas!</p>
+            <p>As long as I can remember I was always interested in technolgy and natural sciences, hence, after school
+                I entered Kaunas University of Technology Applied Physics faculty. After 2 years of studying, I found
+                myself really interested in IT and Computer Science, which I barely grasped during my first year of
+                studies. I quickly realized that I need to change direction of studies, decision which led me to where I
+                am now. Even though I started programming only 6 months ago, it quickly became my obsession.</p>
+            <p>
+                I enjoy spending my free time with my family and friends, playing games or watching movies with my wife.
+                On top of that I enjoy learning something new about Computer Science and new technologies in the field,
+                building apps or small games.
+            </p>
         </div>
     </section>
 
     <section class="knowledge">
-        <h1>Technologies I know: </h1>
+        <h1>Technologies I use: </h1>
         <div class="container">
 
             <div class="card html">
                 <div class="inside-container">
                     <div class="front">
                         <div class="img">
-                            <img src="resources/html-5.svg" alt="">
+                            <img src="resources/html-5.svg" alt="html-5">
                         </div>
                         <div class="tech-name">
                             <h3>HTML</h3>
@@ -72,15 +73,30 @@
                 </div>
             </div>
 
-
             <div class="card css">
                 <div class="inside-container">
                     <div class="front">
                         <div class="img">
-                            <img src="resources/css-3.svg" alt="">
+                            <img src="resources/css-3.svg" alt="css3">
                         </div>
                         <div class="tech-name">
                             <h3>CSS</h3>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, dolores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card sass">
+                <div class="inside-container">
+                    <div class="front">
+                        <div class="img">
+                            <img src="resources/sass.svg" alt="sass">
+                        </div>
+                        <div class="tech-name">
+                            <h3>SASS</h3>
                         </div>
                     </div>
                     <div class="back">
@@ -93,7 +109,7 @@
                 <div class="inside-container">
                     <div class="front">
                         <div class="img">
-                            <img src="resources/js.svg" alt="">
+                            <img src="resources/js.svg" alt="Javascript">
                         </div>
                         <div class="tech-name">
                             <h3>Javascript</h3>
@@ -110,7 +126,7 @@
                 <div class="inside-container">
                     <div class="front">
                         <div class="img">
-                            <img src="resources/php.svg" alt="">
+                            <img src="resources/php.svg" alt="php">
                         </div>
                         <div class="tech-name">
                             <h3>PHP</h3>
@@ -126,7 +142,7 @@
                 <div class="inside-container">
                     <div class="front">
                         <div class="img">
-                            <img src="resources/mysql.svg" alt="">
+                            <img src="resources/mysql.svg" alt="mysql">
                         </div>
                         <div class="tech-name">
                             <h3>MySQL</h3>
@@ -143,7 +159,7 @@
                 <div class="inside-container">
                     <div class="front">
                         <div class="img">
-                            <img src="resources/java.svg" alt="">
+                            <img src="resources/java.svg" alt="java">
                         </div>
                         <div class="tech-name">
                             <h3>Java</h3>
@@ -160,7 +176,7 @@
                 <div class="inside-container">
                     <div class="front">
                         <div class="img">
-                            <img src="resources/wordpress.svg" alt="">
+                            <img src="resources/wordpress.svg" alt="wordpress">
                         </div>
                         <div class="tech-name">
                             <h3>Wordpress</h3>
@@ -177,7 +193,7 @@
                 <div class="inside-container">
                     <div class="front">
                         <div class="img">
-                            <img src="resources/laravel-seeklogo.com.svg" alt="">
+                            <img src="resources/laravel-seeklogo.com.svg" alt="laravel">
                         </div>
                         <div class="tech-name">
                             <h3>Laravel</h3>
@@ -195,9 +211,91 @@
             <div class="title">
                 <h1>My Works</h1>
             </div>
-            
+            <div class="projects">
+                <div class="project laravel-app">
+                    <div class="p-title">
+                        <p>Gradebook</p>
+                    </div>
+                    <div class="p-content">
+                        <p>CRUD Laravel application deployed on Heroku</p>
+                        <a href="https://lit-taiga-82647.herokuapp.com/">Visit app</a>
+                    </div>
+                    <div class="overlay">
+                    </div>
+                </div>
+                <div class="project snake">
+                    <div class="p-title">
+                        <div class="p-title">
+                            <p>Snake</p>
+                        </div>
+                        <div class="p-content">
+                            <p>Snake game made with Javascript</p>
+                            <a href="https://www.snakejs.tk">Visit website</a>
+                        </div>
+                        <div class="overlay">
+                        </div>
+                    </div>
+                </div>
+                <div class="project bird">
+                    <div class="p-title">
+                        <div class="p-title">
+                            <p>Flappy Bird Clone</p>
+                        </div>
+                        <div class="p-content">
+                            <p>Flappy Bird game clone made with Javascript, one of my old projects</p>
+                            <a href="resources/flappy bird/index.html">Play</a>
+                        </div>
+                        <div class="overlay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="github">
+                <a href="https://github.com/levandovsky">You can check my other projects on Github!</a>
+            </div>
         </div>
     </section>
+    <section class="contact">
+        <div class="container">
+            <h3>Contact me, <span class="ready">I am ready to work!</span></h3>
+            <button class="btn" id="contact-btn">CONTACT</button>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="links">
+                <div class="link git">
+                    <a href="https://github.com/levandovsky"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="link linkedIn">
+                    <a href="https://www.linkedin.com/in/yegor-levandovskiy-990b7014a/"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content" id="modal-content">
+            <span class="closeBtn" id="closeBtn">&times;</span>
+            <div class="modal-title">
+                <h3>
+                    Contact Form
+                </h3>
+            </div>
+            <form method="POST" name="contact" data-netlify="true" data-netlify-recaptcha="true">
+                <input type="text" name="name" id="name" placeholder="Your name...">
+                <textarea name="message" id="textarea" cols="30" rows="10"
+                    placeholder="Your message here..."></textarea>
+                <div class="button">
+                    <div data-netlify-recaptcha="true"></div>
+                    <button type="submit">Send!</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
 </body>
 
 </html>
