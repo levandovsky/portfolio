@@ -93,7 +93,8 @@ header .content-wrap .first-layer .second-layer .photo {
   height: 140px;
   width: 140px;
   border-radius: 50%;
-  background-color: white;
+  background-image: url("../resources/me.jpg");
+  background-position-x: 50%;
   margin: auto;
 }
 
