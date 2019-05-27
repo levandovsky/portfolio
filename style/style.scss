@@ -18,8 +18,8 @@ $colors: (
   complementary: #ffa136,
   complementary-darken: rgb(255, 125, 0),
   text: #131516,
-  linkedin: #0077B5,
-  git: #9E45AB
+  linkedin: #0077b5,
+  git: #9e45ab
 );
 
 html {
@@ -37,6 +37,10 @@ html {
   &:hover {
     cursor: pointer;
   }
+}
+
+.red {
+  color: red;
 }
 
 header {
@@ -96,10 +100,6 @@ header {
       color: white;
       margin-bottom: 45px;
       word-break: break-all;
-
-      .red {
-        color: red;
-      }
     }
 
     p {
@@ -274,21 +274,18 @@ header {
     }
 
     .github {
-      font-family: map-get($map: $fonts, $key: lato);
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
-      background-color: map-get($map: $colors, $key: complementary);
-      padding: 20px 70px;
-      border-radius: 30px;
-      transition: background-color 200ms ease;
-      &:hover {
-        background-color: map-get($map: $colors, $key: complementary-darken);
-      }
       a {
-        all: unset;
+        font-family: map-get($map: $fonts, $key: lato);
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: map-get($map: $colors, $key: complementary);
+        transition: background-color 200ms ease;
         &:hover {
           cursor: pointer;
+          background-color: map-get($map: $colors, $key: complementary-darken);
         }
       }
     }
@@ -371,7 +368,10 @@ header {
           a {
             box-sizing: border-box;
             all: unset;
+            font-family: map-get($map: $fonts, $key: lato);
             padding: 5px 10px;
+            white-space: nowrap;
+            overflow: hidden;
             background-color: map-get($map: $colors, $key: main);
             border-radius: 5px;
             color: #fff;
@@ -429,7 +429,6 @@ footer {
       width: 40%;
       flex-wrap: wrap;
 
-
       .link {
         box-sizing: border-box;
         padding: 20px;
@@ -449,8 +448,6 @@ footer {
           width: 100%;
           height: 100%;
 
-
-          
           i {
             font-size: 40px;
 

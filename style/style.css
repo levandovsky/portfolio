@@ -17,6 +17,10 @@ html {
   cursor: pointer;
 }
 
+.red {
+  color: red;
+}
+
 header {
   background-image: url("../resources/bg.png");
   background-attachment: fixed;
@@ -100,10 +104,6 @@ header .content-wrap h1 {
   color: white;
   margin-bottom: 45px;
   word-break: break-all;
-}
-
-header .content-wrap h1 .red {
-  color: red;
 }
 
 header .content-wrap p {
@@ -317,28 +317,21 @@ header .content-wrap .arrow-down a {
   margin-bottom: 70px;
 }
 
-.works .container .github {
+.works .container .github a {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
   background-color: #ffa136;
-  padding: 20px 70px;
-  border-radius: 30px;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
 }
 
-.works .container .github:hover {
-  background-color: #ff7d00;
-}
-
-.works .container .github a {
-  all: unset;
-}
-
 .works .container .github a:hover {
   cursor: pointer;
+  background-color: #ff7d00;
 }
 
 .works .container .projects {
@@ -443,7 +436,10 @@ header .content-wrap .arrow-down a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   all: unset;
+  font-family: "Lato", sans-serif;
   padding: 5px 10px;
+  white-space: nowrap;
+  overflow: hidden;
   background-color: #3695ff;
   border-radius: 5px;
   color: #fff;
@@ -560,11 +556,11 @@ footer .container .links .link a i {
 }
 
 footer .container .links .link a i.fab.fa-github {
-  color: #9E45AB;
+  color: #9e45ab;
 }
 
 footer .container .links .link a i.fa-linkedin {
-  color: #0077B5;
+  color: #0077b5;
 }
 
 footer .container .links .link a:hover {
