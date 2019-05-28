@@ -196,35 +196,12 @@ header .content-wrap .arrow-down a {
 }
 
 .knowledge .container .card {
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 20%;
-  min-width: 250px;
-  padding: 50px;
-  border-radius: 30px;
-  margin: auto;
-  margin-bottom: 100px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  height: 330px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  background-color: transparent;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  height: 350px;
+  width: 250px;
+  margin-bottom: 20px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -232,7 +209,28 @@ header .content-wrap .arrow-down a {
   cursor: pointer;
 }
 
-.knowledge .container .card .inside-container {
+.knowledge .container .card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.knowledge .container .card .card-inner .front,
+.knowledge .container .card .card-inner .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #fff;
+  border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,58 +241,24 @@ header .content-wrap .arrow-down a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.knowledge .container .card .inside-container .front {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+.knowledge .container .card .card-inner .front .img img {
+  width: 50px;
+  height: 50px;
 }
 
-.knowledge .container .card .inside-container .front .img img {
-  height: 60px;
-  width: 60px;
-}
-
-.knowledge .container .card .inside-container .front .img .fab {
-  font-size: 60px;
-  color: #3695ff;
-}
-
-.knowledge .container .card .inside-container .front h3 {
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 30px;
-  color: #3695ff;
-}
-
-.knowledge .container .card .inside-container .back {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.knowledge .container .card .card-inner .back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  word-wrap: break-word;
-  color: #131516;
 }
 
-.knowledge .container .card .inside-container .back p {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 16px;
+.knowledge .container .card .card-inner .back p {
+  width: 80%;
+  margin: auto;
 }
 
 .works {
@@ -489,6 +453,7 @@ header .content-wrap .arrow-down a {
 }
 
 .contact .container h3 {
+  text-align: center;
   color: #3695ff;
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -687,10 +652,8 @@ footer .container .links .link a:hover {
 }
 
 .active-card {
-  -webkit-transform: rotateY(180deg) scale(1.05);
-          transform: rotateY(180deg) scale(1.05);
-  -webkit-box-shadow: 0px 16px 27px -15px #524f52;
-          box-shadow: 0px 16px 27px -15px #524f52;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .show-modal {
