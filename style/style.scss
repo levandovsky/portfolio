@@ -275,19 +275,28 @@ header {
     }
 
     .github {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      max-width: 60%;
+      margin: auto;
+      background-color: map-get($map: $colors, $key: complementary);
+      transition: background-color 200ms ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+        background-color: map-get($map: $colors, $key: complementary-darken);
+      }
+
       a {
+        text-decoration: none;
+        color: #fff;
         font-family: map-get($map: $fonts, $key: lato);
         font-size: 16px;
         font-weight: 700;
-        color: #fff;
-        white-space: nowrap;
-        overflow: hidden;
-        background-color: map-get($map: $colors, $key: complementary);
-        transition: background-color 200ms ease;
-        &:hover {
-          cursor: pointer;
-          background-color: map-get($map: $colors, $key: complementary-darken);
-        }
       }
     }
 
@@ -414,11 +423,12 @@ header {
 }
 
 footer {
-  padding: 50px;
   background-image: url("../resources/footer.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   .container {
+    padding: 50px;
     width: 60%;
     margin: auto;
     display: flex;
@@ -427,8 +437,9 @@ footer {
     .links {
       display: flex;
       justify-content: space-between;
-      width: 40%;
+      align-items: center;
       flex-wrap: wrap;
+      width: 50%;
 
       .link {
         box-sizing: border-box;
@@ -572,6 +583,31 @@ footer {
 .stop-scroll {
   height: 100%;
   overflow: hidden;
+}
+
+@media screen and (max-width: 860px) {
+  .contact {
+    .container {
+      flex-direction: column;
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  footer {
+    .container {
+      .links {
+        flex-direction: column;
+
+        .git {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 320px) {
