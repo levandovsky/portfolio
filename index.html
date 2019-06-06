@@ -59,7 +59,9 @@
     </section>
 
     <section class="knowledge">
-        <h1>Technologies I use: </h1>
+        <div class="k-header">
+            <h1>Technologies I use: </h1>
+        </div>
         <div class="container">
 
             <div class="card html">
@@ -281,8 +283,7 @@
                     <a href="https://github.com/levandovsky"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="link linkedIn">
-                    <a href="https://www.linkedin.com/in/yegor-levandovskiy-990b7014a/"><i
-                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/yegor-levandovskiy"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -297,9 +298,9 @@
                 </h3>
             </div>
             <form method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="text" name="name" id="name" placeholder="Your name...">
+                <input type="text" name="name" id="name" placeholder="Your name..." required>
                 <textarea name="message" id="textarea" cols="30" rows="10"
-                    placeholder="Your message here..."></textarea>
+                    placeholder="Your message here..." required></textarea>
                 <div class="button">
                     <button type="submit">Send!</button>
                 </div>
