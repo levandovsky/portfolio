@@ -53,10 +53,27 @@ header .content-wrap {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
-header .content-wrap .first-layer {
+header .content-wrap .circles-wrap {
+  position: relative;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 180px;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+header .content-wrap .circles-wrap .first-layer {
   height: 180px;
   width: 180px;
   border-radius: 50%;
@@ -71,11 +88,14 @@ header .content-wrap .first-layer {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto 50px auto;
+  position: absolute;
+  -webkit-animation: pulse-dot 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+          animation: pulse-dot 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
 }
 
-header .content-wrap .first-layer .second-layer {
-  height: 160px;
-  width: 160px;
+header .content-wrap .circles-wrap .second-layer {
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.06);
   display: -webkit-box;
@@ -87,15 +107,19 @@ header .content-wrap .first-layer .second-layer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  -webkit-animation: pulse-dot 1.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+          animation: pulse-dot 1.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
 }
 
-header .content-wrap .first-layer .second-layer .photo {
+header .content-wrap .circles-wrap .photo {
   height: 140px;
   width: 140px;
   border-radius: 50%;
   background-image: url("../resources/me.jpg");
   background-position-x: 50%;
   margin: auto;
+  position: absolute;
 }
 
 header .content-wrap h1 {
@@ -125,6 +149,11 @@ header .content-wrap .contact-me {
   color: #3695ff;
   background-color: #fff;
   margin-bottom: 85px;
+}
+
+header .content-wrap .arrow-down {
+  -webkit-animation: bounce 3s infinite;
+          animation: bounce 3s infinite;
 }
 
 header .content-wrap .arrow-down a {
@@ -672,6 +701,66 @@ footer .container .links .link a:hover {
   overflow: hidden;
 }
 
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@-webkit-keyframes pulse-dot {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 @media screen and (max-width: 860px) {
   .contact .container {
     -webkit-box-orient: vertical;
@@ -685,6 +774,18 @@ footer .container .links .link a:hover {
 }
 
 @media screen and (max-width: 650px) {
+  header .content-wrap {
+    width: 80%;
+  }
+  header .content-info h1 {
+    font-size: 38px;
+  }
+  .about-me .content-wrap-about-me {
+    width: 80%;
+  }
+  footer .container {
+    width: 100%;
+  }
   footer .container .links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -693,6 +794,9 @@ footer .container .links .link a:hover {
   }
   footer .container .links .git {
     margin-bottom: 20px;
+  }
+  .modal .modal-content {
+    width: 80%;
   }
 }
 

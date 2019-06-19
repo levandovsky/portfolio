@@ -1,313 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/reset.css" type="text/css" />
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/reset.css" type="text/css">
-    <link rel="stylesheet" href="style/style.css" type="text/css">
     <script src="js/main.js" defer></script>
     <title>/levandovskyi.</title>
-</head>
+  </head>
 
-<body id="body">
+  <body id="body">
     <header>
-        <div class="content-wrap">
-            <div class="sandwich">
-            </div>
-            <div class="first-layer">
-                <div class="second-layer">
-                    <div class="photo" id="photo">
-                    </div>
-                </div>
-            </div>
-            <div class="content-info">
-                <h1>/levandovskyi<span class="red">.</span>
-                </h1>
-                <p>Hi there! My name is <b>Yegor Levandovskyi</b>, I am a beginner full stack web developer, and
-                    this is my portfolio page!
-                </p>
-            </div>
-            <button id="triggerBtn" class="contact-me btn">CONTACT</button>
-            <div class="arrow-down">
-                <a href="#about-me"><i class="fas fa-chevron-down"></i></a>
-            </div>
+      <div class="content-wrap">
+        <div class="sandwich"></div>
+        <div class="circles-wrap">
+          <div class="first-layer"></div>
+          <div class="second-layer"></div>
+          <div class="photo" id="photo"></div>
         </div>
+
+        <div class="content-info">
+          <h1>/levandovskyi<span class="red">.</span></h1>
+          <p>
+            Hi there! My name is <b>Yegor Levandovskyi</b>, I am a beginner full
+            stack web developer, and this is my portfolio page!
+          </p>
+        </div>
+        <button id="triggerBtn" class="contact-me btn">CONTACT</button>
+        <div class="arrow-down">
+          <a href="#about-me"><i class="fas fa-chevron-down"></i></a>
+        </div>
+      </div>
     </header>
     <section class="about-me" id="about-me">
-        <div class="content-wrap-about-me">
-            <h1>About Me</h1>
-            <p>As long as I can remember I was always interested in technology and natural sciences, after school
-                I entered Kaunas University of Technology Applied Physics faculty. After 2 years of studying, I found
-                myself really interested in IT and Computer Science, which I barely grasped during my first year of
-                studies. I quickly realized that I need to change direction of studies, decision which led me to where I
-                am now. Even though I started programming only 6 months ago, it quickly became my obsession.</p>
-            <p>
-                I enjoy spending my free time with my family and friends, playing games or watching movies with my wife.
-                On top of that I enjoy reading or watching videos about Computer Science and new technologies in the
-                field,
-                building apps or small games.
-            </p>
-            <p>
-                I am also really passionate about learning new things, I wish to join a team where I could grow as a
-                professional and a person.
-            </p>
-        </div>
+      <div class="content-wrap-about-me">
+        <h1>About Me</h1>
+        <p>
+          As long as I can remember I was always interested in technology and
+          natural sciences, after school I entered Kaunas University of
+          Technology Applied Physics faculty. After 2 years of studying, I found
+          myself really interested in IT and Computer Science, which I barely
+          grasped during my first year of studies. I quickly realized that I
+          need to change direction of studies, decision which led me to where I
+          am now. Even though I started programming only 6 months ago, it
+          quickly became my obsession.
+        </p>
+        <p>
+          I enjoy spending my free time with my family and friends, playing
+          games or watching movies with my wife. On top of that I enjoy reading
+          or watching videos about Computer Science and new technologies in the
+          field, building apps or small games.
+        </p>
+        <p>
+          I am also really passionate about learning new things, I wish to join
+          a team where I could grow as a professional and a person.
+        </p>
+      </div>
     </section>
 
     <section class="knowledge">
-        <div class="k-header">
-            <h1>Technologies I use: </h1>
+      <div class="k-header">
+        <h1>Technologies I use:</h1>
+      </div>
+      <div class="container">
+        <div class="card html">
+          <div class="card-inner">
+            <div class="front">
+              <div class="img">
+                <img src="resources/html-5.svg" alt="html-5" />
+              </div>
+              <div class="tech-name">
+                <h3>HTML</h3>
+              </div>
+            </div>
+            <div class="back">
+              <p>
+                Everyone must start somewhere. I feel comfortable using HTML.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="container">
 
-            <div class="card html">
-                <div class="card-inner">
-                    <div class="front">
-                        <div class="img">
-                            <img src="resources/html-5.svg" alt="html-5">
-                        </div>
-                        <div class="tech-name">
-                            <h3>HTML</h3>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <p>Everyone must start somewhere. I feel comfortable using HTML.</p>
-                    </div>
-                </div>
+        <div class="card css">
+          <div class="card-inner">
+            <div class="front">
+              <div class="img">
+                <img src="resources/css-3.svg" alt="css3" />
+              </div>
+              <div class="tech-name">
+                <h3>CSS</h3>
+              </div>
             </div>
-
-            <div class="card css">
-                <div class="card-inner">
-                    <div class="front">
-                        <div class="img">
-                            <img src="resources/css-3.svg" alt="css3">
-                        </div>
-                        <div class="tech-name">
-                            <h3>CSS</h3>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <p>СSS is what I learned after HTML, easy.</p>
-                    </div>
-                </div>
+            <div class="back">
+              <p>СSS is what I learned after HTML, easy.</p>
             </div>
-
-            <div class="card sass">
-                <div class="card-inner">
-                    <div class="front">
-                        <div class="img">
-                            <img src="resources/sass.svg" alt="sass">
-                        </div>
-                        <div class="tech-name">
-                            <h3>SASS</h3>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <p>I used Sass to style this portfolio page, I really like it.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card js">
-                <div class="card-inner">
-                    <div class="front">
-                        <div class="img">
-                            <img src="resources/js.svg" alt="Javascript">
-                        </div>
-                        <div class="tech-name">
-                            <h3>Javascript</h3>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <p>I know Javascript, it is first "real" programming language that I learned. It was hard in the
-                            beginning but now I really enjoy using it!</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="card php">
-                <div class="card-inner">
-                    <div class="front">
-                        <div class="img">
-                            <img src="resources/php.svg" alt="php">
-                        </div>
-                        <div class="tech-name">
-                            <h3>PHP</h3>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <p>Sometimes it can feel a little messy, but using MVC makes it a lot better. There are still
-                            many things I need to learn in PHP.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card MySQL">
-                <div class="card-inner">
-                    <div class="front">
-                        <div class="img">
-                            <img src="resources/mysql.svg" alt="mysql">
-                        </div>
-                        <div class="tech-name">
-                            <h3>MySQL</h3>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <p>Used MySQL databases to store data of many PHP CRUD applications I made. Still a lot to
-                            learn.</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="card java">
-                <div class="card-inner">
-                    <div class="front">
-                        <div class="img">
-                            <img src="resources/java.svg" alt="java">
-                        </div>
-                        <div class="tech-name">
-                            <h3>Java</h3>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <p>Java taught me about OOP and it's principles. I know absolute basics of it, on my Github you
-                            can find a Battleship game I made with Java a while ago.</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="card wordpress">
-                <div class="card-inner">
-                    <div class="front">
-                        <div class="img">
-                            <img src="resources/wordpress.svg" alt="wordpress">
-                        </div>
-                        <div class="tech-name">
-                            <h3>Wordpress</h3>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <p>Made a webisite with Wordpress once, lot of things that I still need to learn about it.</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="card laravel">
-                <div class="card-inner">
-                    <div class="front">
-                        <div class="img">
-                            <img src="resources/laravel-seeklogo.com.svg" alt="laravel">
-                        </div>
-                        <div class="tech-name">
-                            <h3>Laravel</h3>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <p>Laravel is a framework that I really enjoy, I made several CRUD applications with it. After
-                            using it I started liking PHP more.</p>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
+
+        <div class="card sass">
+          <div class="card-inner">
+            <div class="front">
+              <div class="img">
+                <img src="resources/sass.svg" alt="sass" />
+              </div>
+              <div class="tech-name">
+                <h3>SASS</h3>
+              </div>
+            </div>
+            <div class="back">
+              <p>I used Sass to style this portfolio page, I really like it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card js">
+          <div class="card-inner">
+            <div class="front">
+              <div class="img">
+                <img src="resources/js.svg" alt="Javascript" />
+              </div>
+              <div class="tech-name">
+                <h3>Javascript</h3>
+              </div>
+            </div>
+            <div class="back">
+              <p>
+                I know Javascript, it is first "real" programming language that
+                I learned. It was hard in the beginning but now I really enjoy
+                using it!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card php">
+          <div class="card-inner">
+            <div class="front">
+              <div class="img">
+                <img src="resources/php.svg" alt="php" />
+              </div>
+              <div class="tech-name">
+                <h3>PHP</h3>
+              </div>
+            </div>
+            <div class="back">
+              <p>
+                Sometimes it can feel a little messy, but using MVC makes it a
+                lot better. There are still many things I need to learn in PHP.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card MySQL">
+          <div class="card-inner">
+            <div class="front">
+              <div class="img">
+                <img src="resources/mysql.svg" alt="mysql" />
+              </div>
+              <div class="tech-name">
+                <h3>MySQL</h3>
+              </div>
+            </div>
+            <div class="back">
+              <p>
+                Used MySQL databases to store data of many PHP CRUD applications
+                I made. Still a lot to learn.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card java">
+          <div class="card-inner">
+            <div class="front">
+              <div class="img">
+                <img src="resources/java.svg" alt="java" />
+              </div>
+              <div class="tech-name">
+                <h3>Java</h3>
+              </div>
+            </div>
+            <div class="back">
+              <p>
+                Java taught me about OOP and it's principles. I know absolute
+                basics of it, on my Github you can find a Battleship game I made
+                with Java a while ago.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card wordpress">
+          <div class="card-inner">
+            <div class="front">
+              <div class="img">
+                <img src="resources/wordpress.svg" alt="wordpress" />
+              </div>
+              <div class="tech-name">
+                <h3>Wordpress</h3>
+              </div>
+            </div>
+            <div class="back">
+              <p>
+                Made a webisite with Wordpress once, lot of things that I still
+                need to learn about it.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card laravel">
+          <div class="card-inner">
+            <div class="front">
+              <div class="img">
+                <img src="resources/laravel-seeklogo.com.svg" alt="laravel" />
+              </div>
+              <div class="tech-name">
+                <h3>Laravel</h3>
+              </div>
+            </div>
+            <div class="back">
+              <p>
+                Laravel is a framework that I really enjoy, I made several CRUD
+                applications with it. After using it I started liking PHP more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="works">
-        <div class="container">
-            <div class="title">
-                <h1>My Projects</h1>
-            </div>
-            <div class="projects">
-                <div class="project laravel-app">
-                    <div class="p-title">
-                        <p>Gradebook</p>
-                    </div>
-                    <div class="p-content">
-                        <p>CRUD Laravel application deployed on Heroku</p>
-                        <a href="https://lit-taiga-82647.herokuapp.com/">Visit app</a>
-                    </div>
-                    <div class="overlay">
-                    </div>
-                </div>
-                <div class="project snake">
-                    <div class="p-title">
-                        <div class="p-title">
-                            <p>Snake</p>
-                        </div>
-                        <div class="p-content">
-                            <p>Snake game made with Javascript</p>
-                            <a href="https://www.snakejs.tk">Visit website</a>
-                        </div>
-                        <div class="overlay">
-                        </div>
-                    </div>
-                </div>
-                <div class="project bird">
-                    <div class="p-title">
-                        <div class="p-title">
-                            <p>Comment Section</p>
-                        </div>
-                        <div class="p-content">
-                            <p>Simple vanilla PHP and Javascript commenting system.</p>
-                            <a href="https://polar-shelf-61418.herokuapp.com/">Visit app</a>
-                        </div>
-                        <div class="overlay">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="github btn">
-                <a href="https://github.com/levandovsky">You can check my other projects on Github!</a>
-            </div>
+      <div class="container">
+        <div class="title">
+          <h1>My Projects</h1>
         </div>
+        <div class="projects">
+          <div class="project laravel-app">
+            <div class="p-title">
+              <p>Gradebook</p>
+            </div>
+            <div class="p-content">
+              <p>CRUD Laravel application deployed on Heroku</p>
+              <a href="https://lit-taiga-82647.herokuapp.com/">Visit app</a>
+            </div>
+            <div class="overlay"></div>
+          </div>
+          <div class="project snake">
+            <div class="p-title">
+              <div class="p-title">
+                <p>Snake</p>
+              </div>
+              <div class="p-content">
+                <p>Snake game made with Javascript</p>
+                <a href="https://www.snakejs.tk">Visit website</a>
+              </div>
+              <div class="overlay"></div>
+            </div>
+          </div>
+          <div class="project bird">
+            <div class="p-title">
+              <div class="p-title">
+                <p>Comment Section</p>
+              </div>
+              <div class="p-content">
+                <p>Simple vanilla PHP and Javascript commenting system.</p>
+                <a href="https://polar-shelf-61418.herokuapp.com/">Visit app</a>
+              </div>
+              <div class="overlay"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="github btn">
+          <a href="https://github.com/levandovsky"
+            >You can check my other projects on Github!</a
+          >
+        </div>
+      </div>
     </section>
     <section class="contact">
-        <div class="container">
-            <h3>Contact me, I am ready to work!</h3>
-            <button class="btn" id="contact-btn">CONTACT</button>
-        </div>
+      <div class="container">
+        <h3>Contact me, I am ready to work!</h3>
+        <button class="btn" id="contact-btn">CONTACT</button>
+      </div>
     </section>
     <footer>
-        <div class="container">
-            <div class="links">
-                <div class="link git">
-                    <a href="https://github.com/levandovsky"><i class="fab fa-github"></i></a>
-                </div>
-                <div class="link linkedIn">
-                    <a href="https://www.linkedin.com/in/yegor-levandovskiy"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="links">
+          <div class="link git">
+            <a href="https://github.com/levandovsky"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+          <div class="link linkedIn">
+            <a href="https://www.linkedin.com/in/yegor-levandovskiy"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </footer>
 
     <div id="modal" class="modal">
-        <div class="modal-content" id="modal-content">
-            <span class="closeBtn" id="closeBtn">&times;</span>
-            <div class="modal-title">
-                <h3>
-                    Contact Form
-                </h3>
-            </div>
-            <form method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="text" name="name" id="name" placeholder="Your name..." required>
-                <textarea name="message" id="textarea" cols="30" rows="10"
-                    placeholder="Your message here..." required></textarea>
-                <div class="button">
-                    <button type="submit">Send!</button>
-                </div>
-            </form>
-
+      <div class="modal-content" id="modal-content">
+        <span class="closeBtn" id="closeBtn">&times;</span>
+        <div class="modal-title">
+          <h3>
+            Contact Form
+          </h3>
         </div>
+        <form
+          method="POST"
+          name="contact"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your name..."
+            required
+          />
+          <textarea
+            name="message"
+            id="textarea"
+            cols="30"
+            rows="10"
+            placeholder="Your message here..."
+            required
+          ></textarea>
+          <div class="button">
+            <button type="submit">Send!</button>
+          </div>
+        </form>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

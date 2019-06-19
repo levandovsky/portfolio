@@ -44,7 +44,7 @@ window.addEventListener('click', (e) => {
 
 cards.forEach(element => {
     element.addEventListener('click', () => {
-        let inner = Array.from(element.children);
-        inner[0].classList.toggle('active-card');
+        let inner = Array.from(element.children)[0];
+        inner.classList.toggle('active-card');
     }) 
 });
